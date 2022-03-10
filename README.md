@@ -1,2 +1,2 @@
 # Neu-paper-wallet
-Neu Paper wallet for ETH compatible Networks like CSC
+Neu Paper wallet Generator for ETH compatible Networks like CSC
