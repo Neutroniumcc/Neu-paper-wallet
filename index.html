@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+  <meta charset="UTF-8">
+  <script src="js/ethers-5.2.umd.min.js" type="application/javascript"></script>
+  <script src="js/qrcode.js"></script>
+  <link rel="stylesheet" href="css/style.css"/>
+  <script src="js/sistema.js"></script>
+  <title>CSC Paper Wallet</title>
+</head>
+<body>
+
+  <br><center><form class="boxDatiWallet" style="width:500px;">
+      <div class="col-3">
+          <label>Public address</address></label>
+          <input id="IndirizzoPubblico" type="text" placeholder="0x00000" value="" />
+      </div>
+      <div class="col-3">
+          <label>Private key</label>
+          <input id="ChiavePrivata" type="text" placeholder="ex: 78328R778H087234H78Q34783Q4FHX8H0RQ4R08734TH8743H8Q73HT" value=""/>
+      </div>
+      <br>
+      <div class="col-3">
+          <a href="javascript:genera();"><button   type="button" >Generete Wallet</button ></a>
+          <button type="button" onClick="window.print()">Print</button>
+      </div>                        
+  </form></center>
+    <!-- -->
+  <div class="wallet" id="wallet">
+    <img src="./images/wallet_paper.png"/>
+    <div class="amount-added-text">Amount</div>
+    <div class="date-text">Date</div>
+    <div class="note-text">Note</div>
+    <div class="instruction-text">
+      <ul>
+        <li>
+            ° Use only the <b>public</b> address to deposit and be sent the CSC
+        </li>
+        <li>
+          ° <b>DO NOT SHARE THE PRIVATE KEY WITH ANYONE</b>, Not your key , Not your money!
+        </li>
+      </ul>
+    </div>
+    <div  id="ChiavePrivata_testo" class="secret-text"></div>
+    <div id="IndirizzoPubblico_testo" class="address-text"></div>
+    <div id="ChiavePrivata_qr" class="qr-secret"></div>
+    <div id="IndirizzoPubblico_qr" class="qr-address"></div>
+  </div>
+ 
+</body>
+</html>
